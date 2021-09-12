@@ -1,13 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Angle of Triangle</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Angle of Triangles</title>
+
+    <!-- talwind CDN -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <form id="sum-smt" required>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+    body {
+      font-family: Poppins;
+    }
+    .h-75 {
+      height: 72vh;
+    }
+  </style>
+  <body class="flex flex-col justify-center items-center">
+    <nav
+      class="
+        flex
+        justify-between
+        h-20
+        w-screen
+        items-center
+        bg-blue-100
+        shadow
+        md:px-6
+      "
+    >
+      <h1 class="flex font-bold">
+        <span
+          ><svg
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+            /></svg></span
+        >Fun with Triangles
+      </h1>
+      <div class="flex space-x-2 font-bold items-center">
+        <a
+          class="flex items-center"
+          href="https://github.com/parthpandyappp/stock-calcy/"
+          ><span
+            ><img
+              src="https://img.icons8.com/doodle/48/000000/github--v1.png" /></span
+        ></a>
+        <a
+          class="flex items-center px-1"
+          href="https://parthpandyappp.github.io/"
+          ><span
+            ><img
+              src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png" /></span
+        ></a>
+      </div>
+    </nav>
+    <nav class="flex space-x-3 m-3">
+      <a
+        class="
+          border-2 border-blue-100
+          px-2
+          py-2
+          rounded-lg
+          hover:shadow-lg
+          font-bold
+        "
+        href="assets/pages/hypotenuse.html"
+        >Hypotenuse</a
+      >
+      <a
+        class="
+          border-2 border-blue-100
+          px-2
+          py-2
+          rounded-lg
+          hover:shadow-lg
+          font-bold
+        "
+        href="assets/pages/anglesoftriangles.html"
+        >Angles of triangles</a
+      >
+      <a
+        class="
+          border-2 border-blue-100
+          px-2
+          py-2
+          rounded-lg
+          hover:shadow-lg
+          font-bold
+        "
+        href="assets/pages/areaoftriangle.html"
+        >Area of triangle</a
+      >
+    </nav>
+    <form class="flex flex-col" id="sum-smt" required>
       <!--Get first angle of triangle   -->
       <label for="angle-one-val">Angle One</label>
       <input name="angle-one-val" id="angle-one-val" type="number" />

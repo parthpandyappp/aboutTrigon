@@ -2,6 +2,7 @@ const quizform = document.getElementById("quiz-smt");
 const submitBtn = document.getElementById("ans-smt");
 const outputEl = document.getElementById("outputEl");
 
+console.log("Parth")
 const correctAnswers = [
     "90°",
     "right angled",
