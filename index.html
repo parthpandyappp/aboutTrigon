@@ -1,160 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Fun with Triangles</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fun With Triangles</title>
+
+    <!-- talwind CDN -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <nav>
-      <a href="assets/pages/hypotenuse.html">Hypotenuse</a>
-      <a href="assets/pages/anglesoftriangles.html">Angles of triangles</a>
-      <a href="assets/pages/areaoftriangle.html">Area of triangle</a>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+    body {
+      font-family: Poppins;
+    }
+    .h-75 {
+      height: 72vh;
+    }
+  </style>
+  <body class="flex flex-col justify-center items-center">
+    <nav
+      class="
+        flex
+        justify-between
+        h-20
+        w-screen
+        items-center
+        bg-blue-100
+        shadow
+        md:px-6
+      "
+    >
+      <h1 class="flex font-bold">
+        <span
+          ><svg
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+            /></svg></span
+        >Fun with Triangles
+      </h1>
+      <div class="flex space-x-2 font-bold items-center">
+        <a
+          class="flex items-center"
+          href="https://github.com/parthpandyappp/stock-calcy/"
+          ><span
+            ><img
+              src="https://img.icons8.com/doodle/48/000000/github--v1.png" /></span
+        ></a>
+        <a
+          class="flex items-center px-1"
+          href="https://parthpandyappp.github.io/"
+          ><span
+            ><img
+              src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png" /></span
+        ></a>
+      </div>
     </nav>
-    <main>
-      <form id="quiz-smt" required>
+    <nav class="flex space-x-3 m-3">
+      <a
+        class="
+          border-2 border-blue-100
+          px-2
+          py-2
+          rounded-lg
+          hover:shadow-lg
+          font-bold
+        "
+        href="assets/pages/hypotenuse.html"
+        >Hypotenuse</a
+      >
+      <a
+        class="
+          border-2 border-blue-100
+          px-2
+          py-2
+          rounded-lg
+          hover:shadow-lg
+          font-bold
+        "
+        href="assets/pages/anglesoftriangles.html"
+        >Angles of triangles</a
+      >
+      <a
+        class="
+          border-2 border-blue-100
+          px-2
+          py-2
+          rounded-lg
+          hover:shadow-lg
+          font-bold
+        "
+        href="assets/pages/areaoftriangle.html"
+        >Area of triangle</a
+      >
+    </nav>
+    <main class="flex flex-col justify-center items-center p-5 w-screen">
+      <form
+        class="flex flex-col space-y-2 border-2 border-blue-500 p-3 rounded-lg"
+        id="quiz-smt"
+        required
+      >
         <div>
           <p>
-            What is the third angle for the triangle where angle1 = 45° and
+            1. What is the third angle for the triangle where angle1 = 45° and
             angle2 = 45°?
           </p>
-          <label><input type="radio" name="question1" value="45°" />45°</label>
-          <label><input type="radio" name="question1" value="90°" />90°</label>
-          <label><input type="radio" name="question1" value="60°" />60°</label>
+          <div class="m-2">
+            <label class="p-2"
+              ><input type="radio" name="question1" value="45°" />45°</label
+            >
+            <label class="p-2"
+              ><input type="radio" name="question1" value="90°" />90°</label
+            >
+            <label class="p-2"
+              ><input type="radio" name="question1" value="60°" />60°</label
+            >
+          </div>
         </div>
         <div>
           <p>
-            What is the third angle for the triangle where angle1 = 45° and
+            2. What is the third angle for the triangle where angle1 = 45° and
             angle2 = 45°?
           </p>
-          <label>
-            <input type="radio" name="question2" value="obtuse" />obtuse
-          </label>
-          <label
-            ><input type="radio" name="question2" value="acute" />acute</label
-          >
-          <label
-            ><input type="radio" name="question2" value="right angled" />right
-            angled</label
-          >
+          <div class="m-2">
+            <label class="p-2">
+              <input type="radio" name="question2" value="obtuse" />obtuse
+            </label>
+            <label class="p-2"
+              ><input type="radio" name="question2" value="acute" />acute</label
+            >
+            <label class="p-2"
+              ><input type="radio" name="question2" value="right angled" />right
+              angled</label
+            >
+          </div>
         </div>
         <div>
-          <p>A triangle can have</p>
-          <label>
-            <input type="radio" name="question3" value="one right angle" />
-            one right angle
-          </label>
-          <label
-            ><input type="radio" name="question3" value="two right angles" />two
-            right angles</label
-          >
+          <p>3. A triangle can have</p>
+          <div class="m-2">
+            <label class="p-2">
+              <input type="radio" name="question3" value="one right angle" />
+              one right angle
+            </label>
+            <label class="p-2"
+              ><input
+                type="radio"
+                name="question3"
+                value="two right angles"
+              />two right angles</label
+            >
+          </div>
         </div>
         <div>
-          <p>Which of the following can form a right angled triangle?</p>
-          <label>
-            <input type="radio" name="question4" value="14, 15, 26" />
-            14, 15, 26
-          </label>
-          <label>
-            <input type="radio" name="question4" value="12, 16, 20" />
-            12, 16, 20</label
-          >
+          <p>4. Which of the following can form a right angled triangle?</p>
+          <div class="m-2">
+            <label class="p-2">
+              <input type="radio" name="question4" value="14, 15, 26" />
+              14, 15, 26
+            </label>
+            <label class="p-2">
+              <input type="radio" name="question4" value="12, 16, 20" />
+              12, 16, 20</label
+            >
+          </div>
         </div>
         <div>
-          <p>Which of the following triangles are always similar?</p>
-          <label>
-            <input type="radio" name="question5" value="Equilateral triangle" />
-            Equilateral triangle
-          </label>
-          <label>
-            <input type="radio" name="question5" value="Isosceles triangle" />
-            Isosceles triangle</label
-          >
+          <p>5. Which of the following triangles are always similar?</p>
+          <div class="m-2">
+            <label class="p-2">
+              <input
+                type="radio"
+                name="question5"
+                value="Equilateral triangle"
+              />
+              Equilateral triangle
+            </label>
+            <label class="p-2">
+              <input type="radio" name="question5" value="Isosceles triangle" />
+              Isosceles triangle</label
+            >
+          </div>
         </div>
         <div>
           <p>
-            If one angle of a triangle is obtuse, then which one of the
+            6. If one angle of a triangle is obtuse, then which one of the
             following is the possible measure of remaining angles?
           </p>
-          <label>
-            <input type="radio" name="question6" value="100°" />
-            100°
-          </label>
-          <label>
-            <input type="radio" name="question6" value="85°" />
-            85°</label
-          >
+          <div class="m-2">
+            <label class="p-2">
+              <input type="radio" name="question6" value="100°" />
+              100°
+            </label>
+            <label class="p-2">
+              <input type="radio" name="question6" value="85°" />
+              85°</label
+            >
+          </div>
         </div>
 
         <div>
           <p>
-            If the largest angle in a triangle is 70°, what is the least
+            7. If the largest angle in a triangle is 70°, what is the least
             possible value of the smallest angle of the triangle?
           </p>
-          <label>
-            <input type="radio" name="question7" value="30°" />
-            30°
-          </label>
-          <label>
-            <input type="radio" name="question7" value="10°" />
-            10°
-          </label>
+          <div class="m-2">
+            <label class="p-2">
+              <input type="radio" name="question7" value="30°" />
+              30°
+            </label>
+            <label class="p-2">
+              <input type="radio" name="question7" value="10°" />
+              10°
+            </label>
+          </div>
         </div>
 
         <div>
-          <p>The perimeter of scalene triangle with sides a, b, c is</p>
-          <label>
-            <input type="radio" name="question8" value="a + b + c" />
-            a + b + c
-          </label>
-          <label>
-            <input type="radio" name="question8" value="2a" />
-            2a
-          </label>
-          <label>
-            <input type="radio" name="question8" value="None of these" />
-            None of these
-          </label>
+          <p>8. The perimeter of scalene triangle with sides a, b, c is</p>
+          <div class="m-2">
+            <label class="p-2">
+              <input type="radio" name="question8" value="a + b + c" />
+              a + b + c
+            </label>
+            <label class="p-2">
+              <input type="radio" name="question8" value="2a" />
+              2a
+            </label>
+            <label class="p-2">
+              <input type="radio" name="question8" value="None of these" />
+              None of these
+            </label>
+          </div>
         </div>
 
         <div>
-          <p>A scalene triangle has ___ lines of symmetry</p>
-          <label>
-            <input type="radio" name="question9" value="two" />two
-          </label>
-          <label>
-            <input type="radio" name="question9" value="no" />
-            no
-          </label>
-          <label>
-            <input type="radio" name="question9" value="15" />
-            15
-          </label>
+          <p>9. A scalene triangle has ___ lines of symmetry</p>
+          <div class="m-2">
+            <label class="p-2">
+              <input type="radio" name="question9" value="two" />two
+            </label>
+            <label class="p-2">
+              <input type="radio" name="question9" value="no" />
+              no
+            </label>
+            <label class="p-2">
+              <input type="radio" name="question9" value="15" />
+              15
+            </label>
+          </div>
         </div>
 
         <div>
           <p>
-            There is a right triangle PQR where: angle Q = 90°; angle P = angle
-            R. What is the measure of angles P and R?
+            10. There is a right triangle PQR where: angle Q = 90°; angle P =
+            angle R. What is the measure of angles P and R?
           </p>
-          <label>
-            <input type="radio" name="question10" value="85°" />
-            85°
-          </label>
-          <label>
-            <input type="radio" name="question10" value="65°" />
-            65°
-          </label>
-          <label>
-            <input type="radio" name="question10" value="45°" />
-            45°
-          </label>
+          <div class="m-2">
+            <label class="p-2">
+              <input type="radio" name="question10" value="85°" />
+              85°
+            </label>
+            <label class="p-2">
+              <input type="radio" name="question10" value="65°" />
+              65°
+            </label>
+            <label class="p-2">
+              <input type="radio" name="question10" value="45°" />
+              45°
+            </label>
+          </div>
         </div>
-        <button type="submit" id="ans-smt">Submit</button>
       </form>
+      <button
+        class="bg-blue-500 shadow-lg px-3 py-1 m-2 rounded font-bold text-white"
+        type="submit"
+        id="ans-smt"
+      >
+        Submit
+      </button>
     </main>
     <div id="outputEl"></div>
     <script src="./assets/javascript/quiz.js"></script>
   </body>
+  <footer
+    class="
+      flex
+      justify-center
+      items-center
+      bg-blue-100
+      space-x-2
+      h-20
+      w-screen
+      mt-4
+    "
+  >
+    <a href="https://twitter.com/parthpandyappp/">
+      <img src="https://img.icons8.com/doodle/48/000000/twitter-circled.png" />
+    </a>
+    <a href="https://www.linkedin.com/in/parthpandyappp">
+      <img src="https://img.icons8.com/doodle/48/000000/linkedin-circled.png" />
+    </a>
+    <a href="https://github.com/parthpandyappp"
+      ><img src="https://img.icons8.com/plasticine/60/000000/github.png"
+    /></a>
+  </footer>
 </html>
