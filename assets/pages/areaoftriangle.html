@@ -1,25 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Area of Triangle</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Area of Triangle</title>
+
+    <!-- talwind CDN -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <form id="area-smt" required>
-      <!--Get base value of triangle  -->
-      <label for="base-val">Enter base value</label>
-      <input name="base-val" id="base-val" type="number" />
 
-      <!-- Get height value of triangle  -->
-      <label for="hgt-val">Enter height value</label>
-      <input name="hgt-val" id="hgt-val" type="number" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-      <button type="submit">Calculate Area</button>
-    </form>
+    body {
+      font-family: Poppins;
+    }
+    .h-75 {
+      height: 72vh;
+    }
+  </style>
+  <body class="flex flex-col justify-center items-center">
+    <nav
+      class="
+        flex
+        justify-between
+        h-20
+        w-screen
+        items-center
+        bg-blue-100
+        shadow
+        md:px-6
+      "
+    >
+      <h1 class="flex font-bold">
+        <span
+          ><svg
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+            /></svg></span
+        >Fun with Triangles
+      </h1>
+      <div class="flex space-x-2 font-bold items-center">
+        <a
+          class="flex items-center"
+          href="https://github.com/parthpandyappp/stock-calcy/"
+          ><span
+            ><img
+              src="https://img.icons8.com/doodle/48/000000/github--v1.png" /></span
+        ></a>
+        <a
+          class="flex items-center px-1"
+          href="https://parthpandyappp.github.io/"
+          ><span
+            ><img
+              src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png" /></span
+        ></a>
+      </div>
+    </nav>
+    <nav class="flex space-x-3 m-3">
+      <a
+        class="
+          border-2 border-blue-100
+          px-2
+          py-2
+          rounded-lg
+          hover:shadow-lg
+          font-bold
+        "
+        href="hypotenuse.html"
+        >Hypotenuse</a
+      >
+      <a
+        class="
+          border-2 border-blue-100
+          px-2
+          py-2
+          rounded-lg
+          hover:shadow-lg
+          font-bold
+        "
+        href="anglesoftriangles.html"
+        >Angles of triangles</a
+      >
+      <a
+        class="
+          border-2 border-blue-100
+          px-2
+          py-2
+          rounded-lg
+          hover:shadow-lg
+          font-bold
+        "
+        href="areaoftriangle.html"
+        >Area of triangle</a
+      >
+    </nav>
+    <main class="flex flex-col justify-center items-center p-5 w-screen">
+      <form
+        class="
+          flex flex-col
+          space-y-2
+          border-2 border-blue-500
+          p-3
+          rounded-lg
+          mt-12
+          w-5/6
+          md:w-1/3
+        "
+        id="area-smt"
+        required
+      >
+        <!--Get base value of triangle  -->
+        <label class="font-bold" for="base-val">Enter base value</label>
+        <input
+          class="border-2 border-grey-200 rounded p-2"
+          name="base-val"
+          id="base-val"
+          type="number"
+        />
 
-    <div id="outputEl"></div>
+        <!-- Get height value of triangle  -->
+        <label class="font-bold" for="hgt-val">Enter height value</label>
+        <input
+          class="border-2 border-grey-200 rounded p-2"
+          name="hgt-val"
+          id="hgt-val"
+          type="number"
+        />
+
+        <div class="text-center">
+          <button
+            class="bg-blue-500 shadow px-3 py-2 font-bold text-white rounded"
+            type="submit"
+          >
+            Calculate Area
+          </button>
+        </div>
+      </form>
+    </main>
+    <div class="text-2xl font-bold m-4" id="outputEl"></div>
     <script src="../javascript/areaoftriangle.js"></script>
   </body>
+  <footer
+    class="
+      flex
+      justify-center
+      items-center
+      bg-blue-100
+      space-x-2
+      h-20
+      w-screen
+      mt-14
+    "
+  >
+    <a href="https://twitter.com/parthpandyappp/">
+      <img src="https://img.icons8.com/doodle/48/000000/twitter-circled.png" />
+    </a>
+    <a href="https://www.linkedin.com/in/parthpandyappp">
+      <img src="https://img.icons8.com/doodle/48/000000/linkedin-circled.png" />
+    </a>
+    <a href="https://github.com/parthpandyappp"
+      ><img src="https://img.icons8.com/plasticine/60/000000/github.png"
+    /></a>
+  </footer>
 </html>
